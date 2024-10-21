@@ -55,7 +55,7 @@ type GracefulShutdown struct {
 	errorHandler ErrorHandler
 }
 
-func (gs *GracefulShutdown) New() *GracefulShutdown {
+func New() *GracefulShutdown {
 	return &GracefulShutdown{
 		callbacks: make([]ShutdownCallback, 10),
 		managers:  make([]ShutdownManager, 3),
