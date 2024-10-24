@@ -57,8 +57,8 @@ type GracefulShutdown struct {
 
 func New() *GracefulShutdown {
 	return &GracefulShutdown{
-		callbacks: make([]ShutdownCallback, 10),
-		managers:  make([]ShutdownManager, 3),
+		callbacks: make([]ShutdownCallback, 0, 10),
+		managers:  make([]ShutdownManager, 0, 3),
 	}
 }
 
